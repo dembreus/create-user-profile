@@ -3,7 +3,11 @@ import NavBar from "./NavBar";
 import '../css/CreateUser.css'
 
 export default class CreateUser extends Component {
-    state = {};
+    state = {
+        firstName: '',
+        lastName: ''
+    };
+
 
     render() {
         return (
@@ -60,70 +64,70 @@ export default class CreateUser extends Component {
                                    className="form-control is-valid"
                                    id="validationServer01"
                                    placeholder="First name"
-                                   value="Mark" required/>
+                                   required/>
                             <div className="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div className="col-md-4 mb-3">
                             <label htmlFor="validationServer02">Last name</label>
-                            <input type="text" className="form-control is-valid" id="validationServer02"
-                                   placeholder="Last name" value="Otto" required/>
+                            <input type="text"
+                                   className="form-control is-valid"
+                                   id="validationServer02"
+                                   placeholder="Last name"
+                                   required/>
                             <div className="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div className="col-md-4 mb-3">
-                            <label htmlFor="validationServerUsername">Username</label>
+                            <label htmlFor="validationServerUsername">Email Address</label>
                             <div className="input-group">
-                                <div className="input-group-prepend">
-                                    <span className="input-group-text" id="inputGroupPrepend3">@</span>
-                                </div>
-                                <input type="text"
+                                <input type="email"
                                        className="form-control
                                        is-invalid"
-                                       id="validationServerUsername"
-                                       placeholder="Username"
+                                       id="validationServerEmail"
+                                       placeholder="example@example.com"
                                        aria-describedby="inputGroupPrepend3"
                                        required/>
                                 <div className="invalid-feedback">
-                                    Please choose a username.
+                                    Please input a valid a Email.
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="form-row">
                         <div className="col-md-6 mb-3">
-                            <label htmlFor="validationServer03">City</label>
-                            <input type="text"
+                            <label htmlFor="validationServer03">Phone Number</label>
+                            <input type="number"
                                    className="form-control is-invalid"
                                    id="validationServer03"
-                                   placeholder="City"
+                                   placeholder="xxx-xxx-xxxx"
                                    required/>
                             <div className="invalid-feedback">
-                                Please provide a valid city.
+                                Please provide a valid phone number.
                             </div>
                         </div>
                         <div className="col-md-3 mb-3">
-                            <label htmlFor="validationServer04">State</label>
-                            <input type="text"
+                            <label htmlFor="validationServer04">Password</label>
+                            <input type="password"
                                    className="form-control is-invalid"
                                    id="validationServer04"
-                                   placeholder="State"
+                                   placeholder="Password"
                                    required/>
                             <div className="invalid-feedback">
-                                Please provide a valid state.
+                                Password does not match.
                             </div>
                         </div>
                         <div className="col-md-3 mb-3">
-                            <label htmlFor="validationServer05">Zip</label>
-                            <input type="text"
+                            <label htmlFor="validationServer05">Confirm Password</label>
+                            <input type="password"
                                    className="form-control is-invalid"
                                    id="validationServer05"
-                                   placeholder="Zip"
+                                   placeholder="re-enter password"
                                    required/>
                             <div className="invalid-feedback">
-                                Please provide a valid zip.
+                                Password does not match.
                             </div>
                         </div>
                     </div>

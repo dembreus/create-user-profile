@@ -3,10 +3,10 @@ button {
     margin: 1px;
 }
 body {
-    background-color: rgba(3, 40, 33, 0.94);
+    background-color: rgba(184, 196, 196, 0.94);
     font: 20px "Montserrat", sans-serif;
     line-height: 1.8;
-    color: #f5f6f7;
+    color: #032821;
 }
 .container-fluid {
     padding-top: 70px;

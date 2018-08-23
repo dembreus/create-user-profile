@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb2dcef1-f008-43f9-be15-cddcadbed4bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/CreateUser.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/NavBar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/UserLogin.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CreateUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,76 +20,71 @@
     <session id="-359679254">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="8" />
+          <entry key="css" value="13" />
           <entry key="html" value="2" />
-          <entry key="js" value="12" />
+          <entry key="js" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="13" />
           <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="12" />
+          <entry key="JavaScript" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="139" />
           <entry key="html" value="1" />
-          <entry key="js" value="1807" />
+          <entry key="js" value="2169" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="139" />
           <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="1807" />
+          <entry key="JavaScript" value="2169" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/CreateUser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="552">
+              <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
-                <element signature="e#2577#2737#0" />
-                <element signature="e#2772#2891#0" />
-                <element signature="e#3087#3246#0" />
-                <element signature="e#3280#3399#0" />
-                <element signature="e#3981#4372#0" />
-                <element signature="e#4108#4251#0" />
-                <element signature="e#4853#4996#0" />
-                <element signature="e#4728#4866#0" />
-                <element signature="e#5466#5718#0" />
-                <element signature="e#5236#5375#0" />
-                <element signature="e#6079#6221#0" />
-                <element signature="e#6253#6390#0" />
-                <element signature="e#6613#6749#0" />
-                <element signature="e#6235#6402#0" />
-                <element signature="e#6435#6578#0" />
-                <marker date="1535004520859" expanded="false" signature="0:110" ph="..." />
-                <marker date="1535004520859" expanded="false" signature="339:2596" ph="..." />
+                <element signature="e#6870#7111#0" />
+                <marker date="1535042669010" expanded="true" signature="0:110" ph="..." />
+                <marker date="1535042669010" expanded="false" signature="389:2646" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/UserLogin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/css/CreateUser.css">
+        <entry file="file://$PROJECT_DIR$/src/css/App.css">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -127,11 +115,11 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/css/NavBar.css" />
         <option value="$PROJECT_DIR$/src/components/NavBar.js" />
-        <option value="$PROJECT_DIR$/src/css/App.css" />
         <option value="$PROJECT_DIR$/src/css/UserLogin.css" />
-        <option value="$PROJECT_DIR$/src/components/UserLogin.js" />
         <option value="$PROJECT_DIR$/src/css/CreateUser.css" />
+        <option value="$PROJECT_DIR$/src/css/App.css" />
         <option value="$PROJECT_DIR$/src/components/CreateUser.js" />
+        <option value="$PROJECT_DIR$/src/components/UserLogin.js" />
       </list>
     </option>
   </component>
@@ -152,8 +140,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="652" />
-    <option name="width" value="1277" />
+    <option name="x" value="778" />
+    <option name="width" value="1149" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -162,7 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,11 +183,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -236,18 +224,19 @@
       <updated>1534889169793</updated>
       <workItem from="1534889171033" duration="4182000" />
       <workItem from="1534899112299" duration="642000" />
-      <workItem from="1534952715322" duration="19945000" />
+      <workItem from="1534952715322" duration="20544000" />
+      <workItem from="1535040403936" duration="3828000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24769000" />
+    <option name="totallyTimeSpent" value="29196000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="522" y="0" width="1021" height="830" extended-state="0" />
+    <frame x="623" y="0" width="919" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.32896653" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3276644" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -261,7 +250,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32998565" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,9 +307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -328,12 +314,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-            <marker date="1534986787577" expanded="false" signature="389:2508" ph="..." />
-          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/NavBar.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -342,10 +327,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/App.css">
+    <entry file="file://$PROJECT_DIR$/src/css/CreateUser.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/css/UserLogin.css">
@@ -355,44 +337,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UserLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <marker date="1534992133175" expanded="true" signature="0:79" ph="..." />
-            <marker date="1534992133175" expanded="false" signature="0:109" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/CreateUser.css">
+    <entry file="file://$PROJECT_DIR$/src/css/App.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CreateUser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="552">
+          <caret line="77" column="35" selection-start-line="77" selection-start-column="35" selection-end-line="77" selection-end-column="35" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#2577#2737#0" />
-            <element signature="e#2772#2891#0" />
-            <element signature="e#3087#3246#0" />
-            <element signature="e#3280#3399#0" />
-            <element signature="e#3981#4372#0" />
-            <element signature="e#4108#4251#0" />
-            <element signature="e#4853#4996#0" />
-            <element signature="e#4728#4866#0" />
-            <element signature="e#5466#5718#0" />
-            <element signature="e#5236#5375#0" />
-            <element signature="e#6079#6221#0" />
-            <element signature="e#6253#6390#0" />
-            <element signature="e#6613#6749#0" />
-            <element signature="e#6235#6402#0" />
-            <element signature="e#6435#6578#0" />
-            <marker date="1535004520859" expanded="false" signature="0:110" ph="..." />
-            <marker date="1535004520859" expanded="false" signature="339:2596" ph="..." />
+            <element signature="e#6870#7111#0" />
+            <marker date="1535042669010" expanded="true" signature="0:110" ph="..." />
+            <marker date="1535042669010" expanded="false" signature="389:2646" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UserLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
         </state>
       </provider>
     </entry>
