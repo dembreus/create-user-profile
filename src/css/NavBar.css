@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #2f65a9;
+    color: #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+    border-radius: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-head {
+    padding-left: 30px;
+}
+.navbar-toggle {
+    background-color: rgba(3, 40, 33, 0.94);
+}
+.nav-head {
+    color: #fff;
+}
+.navbar-nav li a:hover {
+    color: #38a86d !important;
+}
