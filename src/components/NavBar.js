@@ -6,7 +6,7 @@ export default class NavBar extends Component {
     render() {
         return (
             <Fragment>
-                <nav className='navbar navbar-default'>
+                <nav className='navbar navbar-dark bg-dark'>
                     <h1 className="navbar-head"><a className="nav-head" href="/">Home</a></h1>
                                         {/*<div className="navbar-header dropdown">*/}
                         {/*<button type="button"*/}

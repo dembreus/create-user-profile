@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #2f65a9;
+    background-color: #343a40;
     color: #ffffff;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -12,11 +12,11 @@
     padding-left: 30px;
 }
 .navbar-toggle {
-    background-color: rgba(3, 40, 33, 0.94);
+    background-color: rgba(52, 58, 64, 0.94);
 }
 .nav-head {
     color: #fff;
 }
 .navbar-nav li a:hover {
-    color: #38a86d !important;
+    color: #999c9f !important;
 }

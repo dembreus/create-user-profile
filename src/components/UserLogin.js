@@ -3,7 +3,11 @@ import NavBar from "./NavBar";
 import '../css/UserLogin.css'
 
 export default class UserLogin extends Component {
-    state = {};
+    state = {
+        email: '',
+        password: '',
+        wasRemembered: false
+    };
 
     render() {
         return (
@@ -22,11 +26,15 @@ export default class UserLogin extends Component {
                                    id="inputEmail"
                                    className="form-control"
                                    placeholder="Email address"
+                                   value='email'
+                                   onChange={e => this.setState({email: e.target.value})}
                                    required autoFocus/>
                             <input type="password"
                                    id="inputPassword"
                                    className="form-control"
-                                   placeholder="Password" required/>
+                                   placeholder="Password" required
+                                   value='password'
+                                   onChange={e => this.setState({password: e.target.value})}/>
                             <div id="remember" className="checkbox">
                                 <label>
                                     <input type="checkbox"

@@ -10,6 +10,7 @@ export default class UserProfile extends Component {
             <Fragment className='user-profile'>
                 <NavBar/>
                 <h1>User Profile</h1>
+                <h2>{}</h2>
             </Fragment>
         )
     }
