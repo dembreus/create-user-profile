@@ -6,7 +6,8 @@ export default class UserLogin extends Component {
     state = {
         email: '',
         password: '',
-        wasRemembered: false
+        wasRemembered: false,
+        user: {}
     };
 
     render() {
@@ -26,14 +27,12 @@ export default class UserLogin extends Component {
                                    id="inputEmail"
                                    className="form-control"
                                    placeholder="Email address"
-                                   value='email'
                                    onChange={e => this.setState({email: e.target.value})}
                                    required autoFocus/>
                             <input type="password"
                                    id="inputPassword"
                                    className="form-control"
                                    placeholder="Password" required
-                                   value='password'
                                    onChange={e => this.setState({password: e.target.value})}/>
                             <div id="remember" className="checkbox">
                                 <label>
@@ -41,7 +40,8 @@ export default class UserLogin extends Component {
                                            value="remember-me"/> Remember me
                                 </label>
                             </div>
-                            <button className="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in
+                            <button className="btn btn-lg btn-primary btn-block btn-signin" type="submit">
+                                <a href={`/${this.state.user._id}`}/>Sign in
                             </button>
                         </form>
                         <a href="#" className="forgot-password">

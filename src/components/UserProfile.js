@@ -37,7 +37,7 @@ export default class UserProfile extends Component {
 
     async componentDidMount() {
         try {
-            const id = this.props.match.params.id;
+            // const id = this.props.match.params.id;
             const profile = await getProfile(this.state._id);
             this.setState({profile});
             const profiles = await getProfiles();
@@ -57,7 +57,7 @@ export default class UserProfile extends Component {
                 <h2>{`${profile.firstName} ${profile.lastName}`}</h2>
                 <h3>Other Users</h3>
                 <h4>{`${profiles.map(profile => (` ${profile.firstName} ${profile.lastName}`))}`}</h4>
-                <button className="btn btn-danger" onClick={deleteUser(this.state._id)}>Delete Profile</button>
+                <button className="btn btn-danger" onClick={deleteUser(profile._id)}>Delete Profile</button>
             </Fragment>
         )
     }
