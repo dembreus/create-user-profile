@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import user from './user'
+import NavBar from './NavBar'
 
 export const getUsers = async () => {
     const response = await fetch('http://localhost:4000');
@@ -26,6 +27,7 @@ export default class ListOfUsers extends Component {
         const users = this.state.users;
         return(
             <Fragment>
+                <NavBar/>
                 <h1>All Users</h1>
                 <h3>{users.map(profile => (user(profile)))}</h3>
             </Fragment>

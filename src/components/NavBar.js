@@ -48,7 +48,7 @@ export default class NavBar extends Component {
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
                             <li><a href="/"><span className="glyphicon glyphicon-home"/> Home</a></li>
-                            <li><a href="/all-users"><span className='gliphicon '/> All Users</a></li>
+                            <li><a href="/all-users"><span className='glyphicon glyphicon-globe'/> All Users</a></li>
                             <li><a href="/user-profile"><span className="glyphicon glyphicon-user"/> View Profile</a></li>
                             <li><a href="/user-login"><span className="glyphicon glyphicon-log-in"/> Log In</a></li>
                             <li role="separator" className="divider"></li>
