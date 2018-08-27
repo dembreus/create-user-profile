@@ -29,7 +29,11 @@ export default class ListOfUsers extends Component {
             <Fragment>
                 <NavBar/>
                 <h1>All Users</h1>
-                <h3>{users.map(profile => (user(profile)))}</h3>
+                <h3>{users.map(profile => (
+                    <button className="btn btn-light" onClick={() => window.location.replace(`/user-profile/${this.props.match.params.id}`)}>
+                        {user(profile)}
+                    </button>
+                ))}</h3>
             </Fragment>
         )
 }

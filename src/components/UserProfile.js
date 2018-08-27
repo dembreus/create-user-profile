@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react'
 import NavBar from "./NavBar";
+import user from "./user";
 // const getProfiles = async id => {
 //     fetch(`http://localhost:4000/${id}`, {})
 //     .then(function(response) {
@@ -29,16 +30,23 @@ const deleteUser = async _id => {
 };
 
 export default class UserProfile extends Component {
-    state = {
-        profile: {},
-        profiles: [],
-        _id: "D1DsZCGYFW76LlGI"
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            profile: {},
+            profiles: []
+        }
+    }
+    // state = {
+    //     profile: {},
+    //     profiles: [],
+    //     _id: "xgG3c4AdYRJwvVFg"
+    // };
 
     async componentDidMount() {
         try {
-            // const id = this.props.match.params.id;
-            const profile = await getProfile(this.state._id);
+            const id = this.props.match.params.id;
+            const profile = await getProfile(id);
             this.setState({profile});
             const profiles = await getProfiles();
             this.setState({profiles})
@@ -53,11 +61,16 @@ export default class UserProfile extends Component {
         return (
             <Fragment className='user-profile'>
                 <NavBar/>
-                <h1>User Profile</h1>
-                <h2>{`${profile.firstName} ${profile.lastName}`}</h2>
-                <h3>Other Users</h3>
-                <h4>{`${profiles.map(profile => (` ${profile.firstName} ${profile.lastName}`))}`}</h4>
-                <button className="btn btn-danger" onClick={deleteUser(profile._id)}>Delete Profile</button>
+                <h1>{`${profile.firstName} ${profile.lastName}`}</h1>
+                <h2>Email</h2>
+                <h4>{profile.email}</h4>
+                <h2>Phone Number</h2>
+                <h4>{profile.phoneNumber}</h4>
+                {/*<h3>Other Users</h3>*/}
+                {/*<h4>{profiles.map(profile => (user(profile)))}</h4>*/}
+                    <a href="/"><button className="btn btn-info">Update Profile</button></a>
+                    <button className="btn btn-danger" onClick={() => deleteUser(profile._id)}>Delete Profile</button>
+
             </Fragment>
         )
     }
