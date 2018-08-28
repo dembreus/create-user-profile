@@ -12,11 +12,11 @@ import user from "./user";
 // };
 
 export const getProfiles = async () => {
-    const response = await fetch('https://zeit.co/dembreus/create-user-backend/xffkuskspk');
+    const response = await fetch('create-user-backend-xffkuskspk.now.sh');
     return await response.json()
 };
 const getProfile = async id => {
-    return await fetch(`https://zeit.co/dembreus/create-user-backend/xffkuskspk/${id}`, {})
+    return await fetch(`create-user-backend-xffkuskspk.now.sh/${id}`, {})
         .then(response => response.json());
 };
 const deleteUser = async _id => {
