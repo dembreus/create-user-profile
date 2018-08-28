@@ -12,15 +12,15 @@ import user from "./user";
 // };
 
 export const getProfiles = async () => {
-    const response = await fetch('http://localhost:4000');
+    const response = await fetch('https://zeit.co/dembreus/create-user-backend/xffkuskspk');
     return await response.json()
 };
 const getProfile = async id => {
-    return await fetch(`http://localhost:4000/${id}`, {})
+    return await fetch(`https://zeit.co/dembreus/create-user-backend/xffkuskspk/${id}`, {})
         .then(response => response.json());
 };
 const deleteUser = async _id => {
-    return await fetch(`http://localhost:4000/${_id}`, {
+    return await fetch(`https://zeit.co/dembreus/create-user-backend/xffkuskspk/${_id}`, {
         method: 'delete'
     }).then(response => {
         response.json().then(json => {

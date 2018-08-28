@@ -17,7 +17,7 @@ export default class CreateUser extends Component {
         e.preventDefault();
         const data = JSON.stringify({...this.state})
 
-        fetch('http://localhost:4000', {
+        fetch('https://zeit.co/dembreus/create-user-backend/xffkuskspk', {
             method: 'post',
             body: data,
             headers: {

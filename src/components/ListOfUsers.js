@@ -3,7 +3,7 @@ import user from './user'
 import NavBar from './NavBar'
 
 export const getUsers = async () => {
-    const response = await fetch('http://localhost:4000');
+    const response = await fetch('https://zeit.co/dembreus/create-user-backend/xffkuskspk');
     return await response.json()
 };
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 const deleteUser = async _id => {
-    return await fetch(`http://localhost:4000/${_id}`, {
+    return await fetch(`https://zeit.co/dembreus/create-user-backend/xffkuskspk/${_id}`, {
         method: 'delete'
     }).then(response => {
         response.json().then(json => {
