@@ -9,4 +9,4 @@ const deleteUser = async _id => {
         })
     });
 };
-export default deleteUser();
+export default deleteUser;

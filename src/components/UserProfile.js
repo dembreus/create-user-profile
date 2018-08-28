@@ -46,6 +46,8 @@ export default class UserProfile extends Component {
     async componentDidMount() {
         try {
             const id = this.props.match.params.id;
+            console.log(this.props);
+            console.log("id", id);
             const profile = await getProfile(id);
             this.setState({profile});
             const profiles = await getProfiles();
@@ -60,7 +62,7 @@ export default class UserProfile extends Component {
         const profiles = this.state.profiles.filter(profile => profile._id !== this.state.profile._id);
         return (
             <Fragment className='user-profile'>
-                <NavBar/>
+                {/*<NavBar/>*/}
                 <h1>{`${profile.firstName} ${profile.lastName}`}</h1>
                 <h2>Email</h2>
                 <h4>{profile.email}</h4>

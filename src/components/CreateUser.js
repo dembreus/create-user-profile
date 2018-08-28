@@ -30,7 +30,7 @@ export default class CreateUser extends Component {
     render() {
         return (
             <Fragment className='create-user'>
-                <NavBar/>
+                {/*<NavBar/>*/}
                 <h1>Create User</h1>
 
                 {/*<form className='login-form col-sm-4  centered'>*/}

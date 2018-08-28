@@ -8,7 +8,7 @@ export default class Home extends Component{
     render(){
         return(
             <Fragment>
-                <NavBar/>
+                {/*<NavBar/>*/}
                 <h1>Welcome Home</h1>
             </Fragment>
         )

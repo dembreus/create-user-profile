@@ -13,7 +13,7 @@ export default class UserLogin extends Component {
     render() {
         return (
             <Fragment className='user-login '>
-                <NavBar/>
+                {/*<NavBar/>*/}
                 <h1>User Login</h1>
                 <div className="container">
                     <div className="card card-container">

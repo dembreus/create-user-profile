@@ -7,7 +7,7 @@ export default class NavBar extends Component {
         return (
             <Fragment>
                 <nav className='navbar navbar-dark bg-dark'>
-                    <h1 className="navbar-head"><a className="nav-head" href="/">Home</a></h1>
+                    <h1 className="navbar-head"><a className="nav-head" href="/">Create User Profile</a></h1>
                                         {/*<div className="navbar-header dropdown">*/}
                         {/*<button type="button"*/}
                                 {/*className="navbar-toggle dropdown-toggle"*/}
@@ -47,12 +47,12 @@ export default class NavBar extends Component {
                             <span className="glyphicon glyphicon-menu-hamburger"></span>
                         </button>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="/"><span className="glyphicon glyphicon-home"/> Home</a></li>
-                            <li><a href="/all-users"><span className='glyphicon glyphicon-globe'/> All Users</a></li>
-                            <li><a href="/user-profile"><span className="glyphicon glyphicon-user"/> View Profile</a></li>
-                            <li><a href="/user-login"><span className="glyphicon glyphicon-log-in"/> Log In</a></li>
+                            <li><Link to='/'><span className="glyphicon glyphicon-home"/> Home</Link></li>
+                            <li><Link to='/all-users'><span className='glyphicon glyphicon-globe'/> All Users</Link></li>
+                            <li><Link to='/user-profile'><span className="glyphicon glyphicon-user"/> View Profile</Link></li>
+                            <li><Link to='/user-login'><span className="glyphicon glyphicon-log-in"/> Log In</Link></li>
                             <li role="separator" className="divider"></li>
-                            <li><a href="/create-user"><span className="glyphicon glyphicon-pencil"/> Sign Up</a></li>
+                            <li><Link to='/create-user'><span className="glyphicon glyphicon-pencil"/> Sign Up</Link></li>
                         </ul>
                     </div>
                 </nav>
