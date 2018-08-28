@@ -3,7 +3,7 @@ import user from './user'
 import NavBar from './NavBar'
 
 export const getUsers = async () => {
-    const response = await fetch('create-user-backend-xffkuskspk.now.sh');
+    const response = await fetch('https://create-user-backend-axmjvpznmy.now.sh/');
     return await response.json()
 };
 

@@ -3,11 +3,11 @@ import '../css/user.css'
 // import {getUsers} from "./ListOfUsers";
 // import deleteUser from './deleteUser'
 const getUsers = async () => {
-    const response = await fetch('https://zeit.co/dembreus/create-user-backend/xffkuskspk');
+    const response = await fetch('https://create-user-backend-axmjvpznmy.now.sh/');
     return await response.json()
 };
 const deleteUser = async _id => {
-    await fetch(`https://zeit.co/dembreus/create-user-backend/xffkuskspk/${_id}`, {
+    await fetch(`https://create-user-backend-axmjvpznmy.now.sh//${_id}`, {
         method: 'delete'
     }).then(response => {
         response.json().then(json => {
