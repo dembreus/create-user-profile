@@ -1,35 +1,28 @@
 import React, {Component, Fragment} from 'react'
-import '../css/CreateUser.css'
+import getProfile from './getProfile'
+import updateUser from './updateUser'
 
-export default class CreateUser extends Component {
-    state = {
-        firstName: '',
-        lastName: '',
-        phoneNumber: 0,
-        email: '',
-        password: '',
-        comfirmPassword: '',
-        hasAgreed: false,
-        termsAndConditions: 'By marking the checkbox, you agree that you are awesome and that you have no intent ' +
-            'to market or sell any of this information on this website.'
-    };
-
-    handleSubmit = async e => {
-        e.preventDefault();
-        const data = JSON.stringify({...this.state});
-        await fetch('https://create-user-backend-axmjvpznmy.now.sh/', {
-            method: 'post',
-            body: data,
-            headers: {
-                "content-Type": "application/json"
-            }
-        })
-            .then(() => window.location.replace('/all-users'))
-};
+export default class UserProfile extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            profile: {},
+            users: []
+        }
+    }
+    async componentDidMount() {
+        try {
+            const id = this.props.match.params.id;
+            const profile = await getProfile(id);
+            this.setState({profile});
+        } catch (err) {
+            console.log(err)
+        }
+    }
     render() {
+        const profile = this.state.profile;
         return (
-            <Fragment className='create-user'>
-                <h1>Create User</h1>
+            <Fragment className='user-profile'>
                 <form onSubmit={this.handleSubmit}>
                     {        console.log(this.state)
                     }
@@ -39,11 +32,12 @@ export default class CreateUser extends Component {
                             <input type="text"
                                    className="form-control"
                                    id="validationServer01"
+                                   value={`${profile.firstName}`}
                                    placeholder="First name"
                                    onChange={e => this.setState({firstName: e.target.value})}
                                    required/>
                             {/*<div className="valid-feedback">*/}
-                                {/*Looks good!*/}
+                            {/*Looks good!*/}
                             {/*</div>*/}
                         </div>
                         <div className="col-md-4 mb-3">
@@ -51,11 +45,12 @@ export default class CreateUser extends Component {
                             <input type="text"
                                    className="form-control "
                                    id="validationServer02"
+                                   value={`${profile.lastName}`}
                                    placeholder="Last name"
                                    onChange={e => this.setState({lastName: e.target.value})}
                                    required/>
                             {/*<div className="valid-feedback">*/}
-                                {/*Looks good!*/}
+                            {/*Looks good!*/}
                             {/*</div>*/}
                         </div>
                         <div className="col-md-4 mb-3">
@@ -64,12 +59,13 @@ export default class CreateUser extends Component {
                                 <input type="email"
                                        className="form-control  rounded"
                                        id="validationServerEmail"
+                                       value={`${profile.email}`}
                                        placeholder="example@example.com"
                                        aria-describedby="inputGroupPrepend3"
                                        onChange={event => this.setState({email: event.target.value})}
                                        required/>
                                 {/*<div className="invalid-feedback">*/}
-                                    {/*Please input a valid a Email.*/}
+                                {/*Please input a valid a Email.*/}
                                 {/*</div>*/}
                             </div>
                         </div>
@@ -80,11 +76,12 @@ export default class CreateUser extends Component {
                             <input type="number"
                                    className="form-control "
                                    id="validationServer03"
+                                   value={`${profile.phoneNumber}`}
                                    placeholder="xxx-xxx-xxxx"
                                    onChange={event => this.setState({phoneNumber: event.target.value})}
                                    required/>
                             {/*<div className="invalid-feedback">*/}
-                                {/*Please provide a valid phone number.*/}
+                            {/*Please provide a valid phone number.*/}
                             {/*</div>*/}
                         </div>
                         <div className="col-md-3 mb-3">
@@ -92,11 +89,12 @@ export default class CreateUser extends Component {
                             <input type="password"
                                    className="form-control "
                                    id="validationServer04"
+                                   value={''}
                                    placeholder="Password"
                                    onChange={event => this.setState({password: event.target.value})}
                                    required/>
                             {/*<div className="invalid-feedback">*/}
-                                {/*Password does not match.*/}
+                            {/*Password does not match.*/}
                             {/*</div>*/}
                         </div>
                         <div className="col-md-3 mb-3">
@@ -108,26 +106,29 @@ export default class CreateUser extends Component {
                                    onChange={event => this.setState({confirmPassword: event.target.value})}
                                    required/>
                             {/*<div className="invalid-feedback">*/}
-                                {/*Password does not match.*/}
+                            {/*Password does not match.*/}
                             {/*</div>*/}
                         </div>
                     </div>
-                    <div className="form-group">
-                        <div className="form-check">
-                            <input className="form-check-input"
-                                   type="checkbox"
-                                   id="invalidCheck3"
-                                   // onClick={event => this.setState({hasAgreed: !event.target.value})}
-                                   required/>
-                            <label className="form-check-label" htmlFor="invalidCheck3">
-                                <a onClick={() => alert(this.state.termsAndConditions)}>Agree to terms and conditions</a>
-                            </label>
-                            {/*<div className="invalid-feedback">*/}
-                                {/*You must agree before submitting.*/}
-                            {/*</div>*/}
-                        </div>
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit form</button>
+                    {/*<div className="form-group">*/}
+                        {/*<div className="form-check">*/}
+                            {/*<input className="form-check-input"*/}
+                                   {/*type="checkbox"*/}
+                                   {/*id="invalidCheck3"*/}
+                                {/*// onClick={event => this.setState({hasAgreed: !event.target.value})}*/}
+                                   {/*required/>*/}
+                            {/*<label className="form-check-label" htmlFor="invalidCheck3">*/}
+                                {/*<a onClick={() => alert(this.state.termsAndConditions)}>Agree to terms and conditions</a>*/}
+                            {/*</label>*/}
+                            {/*/!*<div className="invalid-feedback">*!/*/}
+                            {/*/!*You must agree before submitting.*!/*/}
+                            {/*/!*</div>*!/*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    <button type="submit"
+                            className="btn btn-success"
+                            onClick={() => window.location.replace(`/user-profile/${profile._id}`)}>
+                        <span className="glyphicon glyphicon-ok"/> Save</button>
                 </form>
             </Fragment>
         )

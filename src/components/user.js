@@ -21,14 +21,14 @@ const deleteUser = async _id => {
 const user = user => {
         return(
             <Fragment >
-                <div className="user-component rounded border-bottom">
+                <div className="user-component rounded border-bottom border-right">
                     <h1>{user.firstName} {user.lastName}</h1>
                     <p>{user.email}</p>
-                    <div>
-                        <button className="btn btn-success">Update</button>
-                        <button className="btn btn-danger"
-                                onClick={() => deleteUser(user._id)}>Delete</button>
-                    </div>
+                    {/*<div>*/}
+                        {/*<button className="btn btn-success">Update</button>*/}
+                        {/*<button className="btn btn-danger"*/}
+                                {/*onClick={() => deleteUser(user._id)}>Delete</button>*/}
+                    {/*</div>*/}
                 </div>
 
             </Fragment>
