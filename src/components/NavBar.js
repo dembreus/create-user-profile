@@ -16,8 +16,8 @@ export default class NavBar extends Component {
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
                             <li><Link to='/'><span className="glyphicon glyphicon-home"/> Home</Link></li>
                             <li><Link to='/all-users'><span className='glyphicon glyphicon-globe'/> All Users</Link></li>
-                            <li><Link to='/user-profile'><span className="glyphicon glyphicon-user"/> View Profile</Link></li>
-                            <li><Link to='/user-login'><span className="glyphicon glyphicon-log-in"/> Log In</Link></li>
+                            {/*<li><Link to='/user-profile'><span className="glyphicon glyphicon-user"/> View Profile</Link></li>*/}
+                            {/*<li><Link to='/user-login'><span className="glyphicon glyphicon-log-in"/> Log In</Link></li>*/}
                             <li role="separator" className="divider"></li>
                             <li><Link to='/create-user'><span className="glyphicon glyphicon-pencil"/> Sign Up</Link></li>
                         </ul>
