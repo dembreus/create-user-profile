@@ -1,13 +1,13 @@
 import React, {Component, Fragment} from 'react'
 import getProfile from './getProfile'
 import updateUser from './updateUser'
+import getUserById from './updateUser'
 
 export default class UserProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            profile: {},
-            users: []
+            profile: {}
         }
     }
     async componentDidMount() {
@@ -20,10 +20,21 @@ export default class UserProfile extends Component {
         }
     }
     render() {
-        const profile = this.state.profile;
+        const profile = this.state;
         return (
             <Fragment className='user-profile'>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={ async e => {
+                    e.preventDefault()
+                    const {profile} = this.state;
+                    const updated = await updateUser(profile._id,
+                        {firstName: profile.firstName,
+                        lastName: profile.lastName,
+                        email: profile.email,
+                        phoneNumber: profile.phoneNumber,
+                        password: profile.password,
+                        confirmPassword: profile.confirmPassword})
+                    this.setState({profile: updated})
+                }}>
                     {        console.log(this.state)
                     }
                     <div className="form-row">
@@ -32,9 +43,9 @@ export default class UserProfile extends Component {
                             <input type="text"
                                    className="form-control"
                                    id="validationServer01"
-                                   value={`${profile.firstName}`}
+                                   value={profile.firstName}
                                    placeholder="First name"
-                                   onChange={e => this.setState({firstName: e.target.value})}
+                                   onChange={e => this.setState({ ...this.state.profile, firstName: e.target.value})}
                                    required/>
                             {/*<div className="valid-feedback">*/}
                             {/*Looks good!*/}
@@ -45,9 +56,9 @@ export default class UserProfile extends Component {
                             <input type="text"
                                    className="form-control "
                                    id="validationServer02"
-                                   value={`${profile.lastName}`}
+                                   value={profile.lastName}
                                    placeholder="Last name"
-                                   onChange={e => this.setState({lastName: e.target.value})}
+                                   onChange={e => this.setState({...this.state.profile, lastName: e.target.value})}
                                    required/>
                             {/*<div className="valid-feedback">*/}
                             {/*Looks good!*/}
@@ -59,10 +70,10 @@ export default class UserProfile extends Component {
                                 <input type="email"
                                        className="form-control  rounded"
                                        id="validationServerEmail"
-                                       value={`${profile.email}`}
+                                       value={profile.email}
                                        placeholder="example@example.com"
                                        aria-describedby="inputGroupPrepend3"
-                                       onChange={event => this.setState({email: event.target.value})}
+                                       onChange={event => this.setState({...this.state.profile, email: event.target.value})}
                                        required/>
                                 {/*<div className="invalid-feedback">*/}
                                 {/*Please input a valid a Email.*/}
@@ -76,9 +87,9 @@ export default class UserProfile extends Component {
                             <input type="number"
                                    className="form-control "
                                    id="validationServer03"
-                                   value={`${profile.phoneNumber}`}
+                                   value={profile.phoneNumber}
                                    placeholder="xxx-xxx-xxxx"
-                                   onChange={event => this.setState({phoneNumber: event.target.value})}
+                                   onChange={event => this.setState({...this.state.profile, phoneNumber: event.target.value})}
                                    required/>
                             {/*<div className="invalid-feedback">*/}
                             {/*Please provide a valid phone number.*/}
@@ -91,7 +102,7 @@ export default class UserProfile extends Component {
                                    id="validationServer04"
                                    value={''}
                                    placeholder="Password"
-                                   onChange={event => this.setState({password: event.target.value})}
+                                   onChange={event => this.setState({...this.state.profile, password: event.target.value})}
                                    required/>
                             {/*<div className="invalid-feedback">*/}
                             {/*Password does not match.*/}
@@ -103,7 +114,7 @@ export default class UserProfile extends Component {
                                    className="form-control"
                                    id="validationServer05"
                                    placeholder="re-enter password"
-                                   onChange={event => this.setState({confirmPassword: event.target.value})}
+                                   onChange={event => this.setState({...this.state.profile, confirmPassword: event.target.value})}
                                    required/>
                             {/*<div className="invalid-feedback">*/}
                             {/*Password does not match.*/}
