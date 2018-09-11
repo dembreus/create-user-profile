@@ -7,25 +7,20 @@ export default class UserProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            profile: {},
-            users: []
+            profile: {}
         }
     }
     async componentDidMount() {
         try {
             const id = this.props.match.params.id;
-            console.log(this.props);
-            console.log("id", id);
             const profile = await getProfile(id);
             this.setState({profile});
-            // const users = await getUsers();
-            // this.setState({users})
         } catch (err) {
             console.log(err)
         }
     }
     render() {
-        const profile = this.state.profile;
+        const {profile} = this.state;
         // const users = this.state.users.filter(profile => profile._id !== this.state.profile._id);
         return (
             <Fragment className='user-profile'>

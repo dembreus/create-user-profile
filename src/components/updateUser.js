@@ -7,11 +7,12 @@ const getUserById = async id => {
 };
 const updateUser = async (_id, user)=> {
     await fetch(`https://create-user-backend-axmjvpznmy.now.sh/${_id}`, {
-        method: 'put',
+        method: 'PUT',
         mode: 'cors',
         body: JSON.stringify(user)
     });
+    console.log(getUserById(_id));
     alert('User Saved');
-    return await getProfile(_id)
+    return await getUserById(_id)
 };
 export default updateUser;
