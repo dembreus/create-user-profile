@@ -26,7 +26,14 @@ export default class UpdateProfile extends Component {
   //     }
   // }
   state = {
-    profile: {}
+    profile: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      password: "",
+      confirmPassword: ""
+    }
   };
 
   async componentDidMount() {
@@ -38,6 +45,12 @@ export default class UpdateProfile extends Component {
       console.log(err);
     }
   }
+
+  handleChange = ({ currentTarget: input }) => {
+    const profile = { ...this.state.profile };
+    profile[input.name] = input.value;
+    this.setState({ profile });
+  };
 
   render() {
     const { profile } = this.state;
@@ -56,7 +69,7 @@ export default class UpdateProfile extends Component {
               confirmPassword: profile.confirmPassword
             });
             this.setState({ profile: updated });
-            console.log("onSubmit profile", this.state.profile);
+            console.log("onSubmit profile", updated);
             // window.location.replace(`/user-profile/${profile._id}`)
           }}
         >
@@ -67,17 +80,11 @@ export default class UpdateProfile extends Component {
               <input
                 type="text"
                 className="form-control"
+                name="firstName"
                 id="validationServer01"
                 value={profile.firstName}
                 placeholder="First name"
-                onChange={e =>
-                  this.setState({
-                    profile: {
-                      ...this.state.profile,
-                      firstName: e.target.value
-                    }
-                  })
-                }
+                onChange={this.handleChange}
                 required
               />
               {/*<div className="valid-feedback">*/}
@@ -89,14 +96,11 @@ export default class UpdateProfile extends Component {
               <input
                 type="text"
                 className="form-control "
+                name="lastName"
                 id="validationServer02"
                 value={profile.lastName}
                 placeholder="Last name"
-                onChange={e =>
-                  this.setState({
-                    profile: { ...this.state.profile, lastName: e.target.value }
-                  })
-                }
+                onChange={this.handleChange}
                 required
               />
               {/*<div className="valid-feedback">*/}
@@ -109,18 +113,12 @@ export default class UpdateProfile extends Component {
                 <input
                   type="email"
                   className="form-control  rounded"
+                  name="email"
                   id="validationServerEmail"
                   value={profile.email}
                   placeholder="example@example.com"
                   aria-describedby="inputGroupPrepend3"
-                  onChange={event =>
-                    this.setState({
-                      profile: {
-                        ...this.state.profile,
-                        email: event.target.value
-                      }
-                    })
-                  }
+                  onChange={this.handleChange}
                   required
                 />
                 {/*<div className="invalid-feedback">*/}
@@ -135,17 +133,11 @@ export default class UpdateProfile extends Component {
               <input
                 type="number"
                 className="form-control "
+                name="phoneNumber"
                 id="validationServer03"
                 value={profile.phoneNumber}
                 placeholder="xxx-xxx-xxxx"
-                onChange={event =>
-                  this.setState({
-                    profile: {
-                      ...this.state.profile,
-                      phoneNumber: event.target.value
-                    }
-                  })
-                }
+                onChange={this.handleChange}
                 required
               />
               {/*<div className="invalid-feedback">*/}
@@ -157,16 +149,10 @@ export default class UpdateProfile extends Component {
               <input
                 type="password"
                 className="form-control "
+                name="password"
                 id="validationServer04"
                 placeholder="New password"
-                onChange={event =>
-                  this.setState({
-                    profile: {
-                      ...this.state.profile,
-                      password: event.target.value
-                    }
-                  })
-                }
+                onChange={this.handleChange}
                 required
               />
               {/*<div className="invalid-feedback">*/}
@@ -178,16 +164,10 @@ export default class UpdateProfile extends Component {
               <input
                 type="password"
                 className="form-control"
+                name="firstName"
                 id="validationServer05"
                 placeholder="re-enter password"
-                onChange={event =>
-                  this.setState({
-                    profile: {
-                      ...this.state.profile,
-                      confirmPassword: event.target.value
-                    }
-                  })
-                }
+                onChange={this.handleChange}
                 required
               />
               {/*<div className="invalid-feedback">*/}
